@@ -20,7 +20,6 @@
     background: #0a0a0f;
   }
 
-  /* ── SLIDE BASE ── */
   .slide {
     width: 1920px;
     height: 1080px;
@@ -30,7 +29,6 @@
     color: #1a1625;
   }
 
-  /* ── SHARED ELEMENTS ── */
   .step-badge {
     display: inline-flex;
     align-items: center;
@@ -55,7 +53,7 @@
   .step-badge.s2 { background: oklch(0.94 0.04 180); color: oklch(0.3 0.15 180); }
   .step-badge.s2 .num { background: oklch(0.45 0.16 180); }
   .step-badge.s3 { background: oklch(0.93 0.06 30); color: oklch(0.35 0.18 30); }
-  .step-badge.s3 .num { background: oklch(0.45 0.2 30); }
+  .step-badge.s3 .num { background: oklch(0.55 0.2 30); }
 
   .slide-num {
     position: absolute;
@@ -73,7 +71,6 @@
     letter-spacing: -0.5px;
   }
 
-  /* screenshot frame */
   .ss-frame {
     border-radius: 14px;
     overflow: hidden;
@@ -110,11 +107,7 @@
     text-transform: uppercase;
   }
 
-  /* ── SLIDE 1: COVER ── */
-  #s1 {
-    background: #0d0b1a;
-    color: #fff;
-  }
+  #s1 { background: #0d0b1a; color: #fff; }
   #s1 .bg-gradient {
     position: absolute; inset: 0;
     background: radial-gradient(ellipse 900px 700px at 30% 60%, oklch(0.35 0.22 290 / 0.7) 0%, transparent 70%),
@@ -153,40 +146,17 @@
     line-height: 1.5;
     margin-bottom: 60px;
   }
-  #s1 .tags {
-    display: flex; gap: 14px; flex-wrap: wrap;
-  }
-  #s1 .tag {
-    padding: 10px 22px;
-    border-radius: 100px;
-    font-size: 20px; font-weight: 600;
-    border: 1.5px solid oklch(1 0 0 / 0.2);
-    color: oklch(0.85 0.06 270);
-    backdrop-filter: blur(8px);
-    background: oklch(1 0 0 / 0.06);
-  }
-  #s1 .right-visual {
-    position: absolute; right: 100px; top: 50%;
-    transform: translateY(-50%);
-    width: 780px;
-  }
 
-  /* ── SLIDE 2: OVERVIEW ── */
   #s2 { background: #0d0b1a; color: #fff; }
   #s2 .bg-gradient {
     position: absolute; inset: 0;
     background: radial-gradient(ellipse 800px 600px at 50% 50%, oklch(0.3 0.15 270 / 0.5) 0%, transparent 70%);
   }
   #s2 .content { position: absolute; inset: 80px 120px; }
-  #s2 h2 {
-    font-size: 44px; font-weight: 700;
-    color: #fff; margin-bottom: 12px;
-  }
+  #s2 h2 { font-size: 44px; font-weight: 700; color: #fff; margin-bottom: 12px; }
   #s2 .desc { font-size: 26px; color: oklch(0.65 0.06 270); margin-bottom: 80px; }
-  #s2 .flow {
-    display: flex; align-items: center; gap: 0;
-    justify-content: center;
-  }
+  #s2 .flow { display: flex; align-items: center; gap: 0; justify-content: center; }
+
   .flow-card {
     width: 320px;
     background: oklch(1 0 0 / 0.07);
@@ -235,7 +205,6 @@
     padding: 0 24px;
   }
 
-  /* ── SLIDE CONTENT LAYOUT ── */
   .slide-inner {
     position: absolute;
     inset: 80px 100px 80px 120px;
@@ -260,15 +229,12 @@
     min-height: 0;
   }
 
-  /* ── SLIDE 3: PREP – Project 생성 ── */
   .steps-list {
     list-style: none;
     display: flex; flex-direction: column;
     gap: 24px;
   }
-  .steps-list li {
-    display: flex; gap: 20px; align-items: flex-start;
-  }
+  .steps-list li { display: flex; gap: 20px; align-items: flex-start; }
   .steps-list .num-circle {
     flex-shrink: 0;
     width: 48px; height: 48px;
@@ -284,11 +250,8 @@
     font-size: 26px; line-height: 1.55;
     color: #2a2040;
   }
-  .steps-list .step-text strong {
-    font-weight: 700; color: oklch(0.35 0.18 290);
-  }
+  .steps-list .step-text strong { font-weight: 700; color: oklch(0.35 0.18 290); }
 
-  /* ── KNOWLEDGE FILE CARDS ── */
   .file-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -323,45 +286,9 @@
     line-height: 1.5;
   }
 
-  /* ── NUMBERED STEP SECTIONS ── */
-  .two-col { display: flex; gap: 56px; flex: 1; align-items: flex-start; }
   .col-left { flex: 1; display: flex; flex-direction: column; gap: 24px; }
   .col-right { flex: 1; display: flex; flex-direction: column; gap: 16px; }
 
-  .instruction-item {
-    display: flex; gap: 16px; align-items: flex-start;
-  }
-  .instruction-item .dot {
-    flex-shrink: 0;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: oklch(0.5 0.18 230);
-    margin-top: 12px;
-  }
-  .instruction-item p {
-    font-size: 24px; line-height: 1.6;
-    color: #2a2040;
-  }
-  .instruction-item p strong { font-weight: 700; color: #1a1625; }
-
-  .highlight-box {
-    background: #fff;
-    border: 1.5px solid oklch(0.88 0.04 270);
-    border-radius: 14px;
-    padding: 24px 28px;
-  }
-  .highlight-box .hb-label {
-    font-size: 16px; font-weight: 700;
-    color: oklch(0.5 0.12 270);
-    letter-spacing: 1.5px; text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .highlight-box .hb-val {
-    font-size: 22px; font-weight: 500;
-    color: #1a1625; line-height: 1.5;
-  }
-
-  /* section divider slide */
   .section-slide {
     position: absolute; inset: 0;
     display: flex; align-items: center;
@@ -392,20 +319,10 @@
     font-size: 28px; line-height: 1.7;
     color: oklch(0.5 0.06 270);
   }
-  .section-slide .right-content strong {
-    font-weight: 700;
-  }
+  .section-slide .right-content strong { font-weight: 700; }
 
-  /* dark section slides */
-  .dark-section {
-    background: #0d0b1a; color: #fff;
-  }
-  .dark-section .bg-gradient-section {
-    position: absolute; inset: 0;
-    pointer-events: none;
-  }
+  .dark-section { background: #0d0b1a; color: #fff; }
 
-  /* check list */
   .check-list {
     list-style: none;
     display: flex; flex-direction: column; gap: 20px;
@@ -423,13 +340,6 @@
     display: flex; align-items: center; justify-content: center;
     color: #fff; font-size: 20px; font-weight: 700;
   }
-
-  /* accent decorations */
-  .accent-line {
-    height: 4px; width: 60px;
-    border-radius: 2px;
-    margin-bottom: 20px;
-  }
 </style>
 </head>
 <body>
@@ -439,16 +349,11 @@
   <section id="s1" class="slide" data-screen-label="01 표지">
     <div class="bg-gradient"></div>
     <div class="grid-overlay"></div>
-
     <div class="content">
       <div class="eyebrow">AI 활용 교육 가이드</div>
       <h1>AI 문항<br>생성 매뉴얼</h1>
       <p class="sub">문항프롬프트 생성기 + Claude Project<br>2단계 워크플로우 완전 가이드</p>
-
     </div>
-
-
-
     <div style="position:absolute; bottom:44px; left:160px; font-size:20px; color:oklch(0.45 0.08 270);">
       2026
     </div>
@@ -483,17 +388,21 @@
           <div class="fc-desc">문항 종류 선택 →<br>생성 프롬프트 획득</div>
         </div>
         <div class="flow-arrow" style="display:flex;align-items:center;">→</div>
-        <div class="flow-card step3">
+        <div class="flow-card step3" style="padding:44px 18px;">
           <div class="fc-icon">✨</div>
           <div class="fc-step">STEP 3</div>
-          <div class="fc-title" style="color:#fff;">Claude Project에서   <br>문항 생성   </div>
+          <div class="fc-title" style="color:#fff; font-size:28px; word-break:keep-all;">Claude Project에서<br>문항 생성</div>
           <div class="fc-desc">프롬프트 입력 →<br>문항 생성 완료</div>
         </div>
+      </div>
+
+      <div style="margin-top:60px; padding:28px 36px; background:oklch(1 0 0/0.05); border:1.5px solid oklch(1 0 0/0.1); border-radius:16px; font-size:22px; color:oklch(0.65 0.06 270); line-height:1.7;">
+        💡 <strong style="color:#fff;">핵심 원칙:</strong> 문항프롬프트 생성기에서 생성된 프롬프트를 <strong style="color:oklch(0.75 0.12 200);">그대로 복사</strong>하여 Claude Project 대화창에 붙여넣기만 하면 됩니다.
       </div>
     </div>
   </section>
 
-  <!-- SLIDE 3: PREP – Claude Project 생성 -->
+  <!-- SLIDE 3: Claude Project 생성 -->
   <section id="s3" class="slide" data-screen-label="03 Claude Project 생성">
     <div class="slide-inner">
       <div class="slide-header">
@@ -502,13 +411,12 @@
         <h2>Claude Project 생성하기</h2>
         <div class="sub-h">claude.ai에서 문항 생성 전용 프로젝트를 만듭니다</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:1.1;">
           <ul class="steps-list">
             <li>
               <span class="num-circle">1</span>
-              <span class="step-text"><strong>claude.ai 접속</strong> → 왼쪽 사이드바에서 <strong>프로젝트</strong> 클릭</span>
+              <span class="step-text"><strong>claude.ai 접속</strong> → 왼쪽 사이드바에서<br><strong>프로젝트</strong> 클릭</span>
             </li>
             <li>
               <span class="num-circle">2</span>
@@ -523,17 +431,11 @@
               <span class="step-text"><strong>프로젝트 만들기</strong> 클릭</span>
             </li>
           </ul>
-
-          <div class="callout" style="margin-top: 8px; opacity: 0">
-            <strong>Tip.</strong> 교과·학년별로 별도 프로젝트를 만들면<br>지식파일 관리가 훨씬 수월합니다.
-          </div>
         </div>
-
-        <div class="col-right" style="flex:1.8; gap:20px;">
+        <div class="col-right" style="flex:1.8; gap:20px; padding-top:120px;">
           <div class="ss-frame" style="height:280px;">
             <img src="uploads/스크린샷 2026-04-28 140234.png" alt="프로젝트 목록">
           </div>
-
         </div>
       </div>
     </div>
@@ -541,7 +443,7 @@
     <div class="slide-num">03 / 12</div>
   </section>
 
-  <!-- SLIDE 4: PREP – 지식파일 업로드 -->
+  <!-- SLIDE 4: 지식파일 업로드 -->
   <section id="s4" class="slide" data-screen-label="04 지식파일 업로드">
     <div class="slide-inner">
       <div class="slide-header">
@@ -550,7 +452,6 @@
         <h2>지식파일 4종 업로드</h2>
         <div class="sub-h">프로젝트의 파일 탭에서 4개 파일을 모두 업로드합니다</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:1.2;">
           <div class="file-cards">
@@ -583,12 +484,10 @@
               </div>
             </div>
           </div>
-
           <div class="callout" style="margin-top:24px;">
-            <strong>업로드 방법:</strong> 프로젝트 우측 <strong>파일 +</strong> 버튼 → 4개 파일 업로드
+            <strong>업로드 방법:</strong> 프로젝트 우측 <strong>파일 </strong>에 4개 파일 드래그하여 업로드
           </div>
         </div>
-
         <div class="col-right" style="flex:1.3;">
           <div class="ss-frame" style="height:680px;">
             <img src="uploads/스크린샷 2026-04-28 140334.png" alt="Claude Project 지식파일" style="object-position:right;">
@@ -627,7 +526,6 @@
         <h2>개념정리 PDF 업로드</h2>
         <div class="sub-h">문항프롬프트 생성기에서 첫 번째 탭 진행</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:1;">
           <ul class="steps-list">
@@ -644,13 +542,11 @@
               <span class="step-text"><strong>학습 프롬프트 생성</strong> 버튼 클릭</span>
             </li>
           </ul>
-
           <div class="tip-box">
             <div class="tip-label">⚠️ 주의</div>
             보안이 걸린 PDF는 내용 추출이 불가합니다.<br>반드시 <strong>보안 해제된 PDF</strong>를 사용하세요.
           </div>
         </div>
-
         <div class="col-right" style="flex:1.4; gap:20px;">
           <div class="ss-frame" style="height:560px;">
             <img src="uploads/스크린샷 2026-04-28 140038.png" alt="PDF 업로드 후">
@@ -669,9 +565,8 @@
         <div class="step-badge s1"><span class="num">1</span>STEP 1</div>
         <div style="height:20px;"></div>
         <h2>학습 프롬프트 결과 확인</h2>
-        <div class="sub-h">생성된 프롬프트는 수정·재생성·복사가 가능합니다</div>
+        <div class="sub-h">생성된 프롬프트는 수정·저장·복사가 가능합니다</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:0.85; flex-direction:column; gap:22px;">
           <div style="background:#fff; border:1.5px solid oklch(0.88 0.04 270); border-radius:14px; padding:28px 30px;">
@@ -695,21 +590,18 @@
               </div>
             </div>
           </div>
-
           <div style="background:#fff; border:1.5px solid oklch(0.88 0.04 270); border-radius:14px; padding:24px 30px; display:flex; gap:16px; flex-direction:column;">
             <div style="font-size:18px; font-weight:700; color:oklch(0.5 0.12 270); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px;">상단 버튼 기능</div>
             <div style="display:flex; gap:12px;">
-              <div style="padding:10px 18px; background:oklch(0.55 0.18 150); border-radius:8px; font-size:19px; font-weight:700; color:#fff;">✓ 수정하기</div>
+              <div style="padding:10px 18px; background:oklch(0.55 0.18 150); border-radius:8px; font-size:19px; font-weight:700; color:#fff;">✏️ 수정하기</div>
               <div style="padding:10px 18px; background:oklch(0.55 0.18 40); border-radius:8px; font-size:19px; font-weight:700; color:#fff;">💾 저장하기</div>
               <div style="padding:10px 18px; background:oklch(0.4 0.18 240); border-radius:8px; font-size:19px; font-weight:700; color:#fff;">📋 복사하기</div>
             </div>
           </div>
-
           <div class="callout">
             학습 프롬프트 확인 후 <strong>학습 완료 → 다음 단계</strong>를 클릭하여 2단계로 이동
           </div>
         </div>
-
         <div class="col-right" style="flex:1.3;">
           <div class="ss-frame" style="height:620px;">
             <img src="uploads/스크린샷 2026-04-28 140049.png" alt="학습 프롬프트 결과">
@@ -747,7 +639,6 @@
         <h2>문항 유형 선택 및 생성 프롬프트</h2>
         <div class="sub-h">문항 생성 탭에서 유형을 선택하면 프롬프트가 완성됩니다</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:1;">
           <ul class="steps-list">
@@ -761,13 +652,9 @@
             </li>
           </ul>
         </div>
-
         <div class="col-right" style="flex:1.4; gap:20px;">
-          <div class="ss-frame" style="height:290px;">
-            <img src="uploads/스크린샷 2026-04-28 140115.png" alt="2단계 설정">
-          </div>
-          <div class="ss-frame" style="height:290px;">
-            <img src="uploads/스크린샷 2026-04-28 140115.png" alt="생성 프롬프트">
+          <div class="ss-frame" style="height:560px;">
+            <img src="uploads/스크린샷 2026-04-28 140127.png" alt="생성 프롬프트">
           </div>
         </div>
       </div>
@@ -793,7 +680,7 @@
     <div class="slide-num" style="color:oklch(0.4 0.06 270);">10 / 12</div>
   </section>
 
-  <!-- SLIDE 11: Claude에서 프롬프트 입력 -->
+  <!-- SLIDE 11: Claude에서 문항 생성 -->
   <section id="s11" class="slide" data-screen-label="11 Claude에서 문항 생성">
     <div class="slide-inner">
       <div class="slide-header">
@@ -802,7 +689,6 @@
         <h2>Claude Project에서 문항 생성</h2>
         <div class="sub-h">학습 프롬프트 → 분석 결과 확인 → 문항 생성 프롬프트 입력</div>
       </div>
-
       <div class="slide-body">
         <div class="col-left" style="flex:0.85;">
           <ul class="steps-list">
@@ -823,12 +709,10 @@
               <span class="step-text">생성된 <strong>문항 결과물 확인</strong> 및 저장</span>
             </li>
           </ul>
-
           <div class="callout" style="border-left-color:oklch(0.55 0.2 30);">
             <strong>같은 대화창</strong>을 유지하는 것이 중요합니다.<br>학습 컨텍스트가 유지된 상태에서 문항이 생성됩니다.
           </div>
         </div>
-
         <div class="col-right" style="flex:1.3; gap:20px;">
           <div class="ss-frame" style="height:300px;">
             <img src="uploads/스크린샷 2026-04-28 140334.png" alt="Claude 학습 분석">
@@ -846,50 +730,41 @@
   <!-- SLIDE 12: 품질 관리 -->
   <section id="s12" class="slide" data-screen-label="12 품질 관리 체크포인트">
     <div style="position:absolute; left:0; top:0; bottom:0; width:520px; background:linear-gradient(160deg, oklch(0.35 0.18 290) 0%, oklch(0.25 0.15 260) 100%);"></div>
-
     <div style="position:absolute; left:0; top:0; bottom:0; width:520px; display:flex; flex-direction:column; justify-content:center; padding:80px 64px; gap:32px;">
       <div>
         <div style="font-size:18px; font-weight:700; color:oklch(0.7 0.1 290); letter-spacing:2px; text-transform:uppercase; margin-bottom:16px;">Quality Control</div>
         <h2 style="font-size:52px; font-weight:800; color:#fff; line-height:1.1; letter-spacing:-1.5px;">결과물<br>품질 관리</h2>
       </div>
       <p style="font-size:22px; color:oklch(0.75 0.06 270); line-height:1.7;">생성된 문항을 검토하고<br>수정이 필요한 경우 Claude에<br>재요청하거나 수동으로 편집합니다.</p>
-
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <span style="padding:8px 18px; background:oklch(1 0 0/0.12); border-radius:100px; font-size:18px; font-weight:600; color:#fff; border:1px solid oklch(1 0 0/0.2);">quality_rubric.md</span>
         <span style="padding:8px 18px; background:oklch(1 0 0/0.12); border-radius:100px; font-size:18px; font-weight:600; color:#fff; border:1px solid oklch(1 0 0/0.2);">examples.md</span>
       </div>
     </div>
-
     <div style="position:absolute; left:560px; top:80px; right:100px; bottom:80px; display:flex; flex-direction:column; gap:24px; justify-content:center;">
       <div style="font-size:26px; font-weight:700; color:#1a1625; margin-bottom:8px;">검토 체크리스트</div>
       <ul class="check-list">
         <li>
           <span class="chk">✓</span>
-          <span>개념코드가 정확히 반영되었는지 확인</span>
+          <span>개념유닛코드가 정확한가</span>
         </li>
         <li>
           <span class="chk">✓</span>
-          <span>선택지 ①~④의 난이도 분포가 적절한지 검토</span>
+          <span>메타데이터 형식이 맞는가</span>
         </li>
         <li>
           <span class="chk">✓</span>
-          <span>오답 선택지가 혼동 유발 요소를 갖추고 있는지 확인</span>
+          <span>개념정리 내용과 일치하는가</span>
         </li>
         <li>
           <span class="chk">✓</span>
-          <span>정답과 해설이 교과 내용과 일치하는지 검증</span>
-        </li>
-        <li>
-          <span class="chk">✓</span>
-          <span><code style="background:oklch(0.94 0.03 270);padding:2px 8px;border-radius:4px;font-size:22px;">quality_rubric.md</code> 기준 충족 여부 확인</span>
+          <span>정답 등 문항 오류는 없는가</span>
         </li>
       </ul>
-
       <div style="margin-top:16px; padding:24px 28px; background:oklch(0.96 0.03 40); border:1.5px solid oklch(0.85 0.1 40); border-radius:14px; font-size:23px; color:oklch(0.3 0.14 40); line-height:1.6;">
         <strong>수정이 필요한 경우:</strong> 같은 대화창에서 "○번 문항의 ○를 수정해줘" 형식으로 Claude에게 재요청하세요.
       </div>
     </div>
-
     <div class="corner-logo">AI 문항 생성 매뉴얼</div>
     <div class="slide-num">12 / 12</div>
   </section>

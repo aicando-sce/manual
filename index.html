@@ -13,40 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="deck-stage.js"></script>
 <style>
-     .slide-container {
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .slide {
-      display: none;
-      font-size: 20px;
-      padding: 40px;
-      background-color: #f0f0f0;
-      border-radius: 8px;
-    }
-
-    .slide-buttons {
-      position: relative;
-      z-index: 1000;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .slide-buttons button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      background-color: white;
-      color: black;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .slide-buttons button:hover {
-      background-color: #f0f0f0;
-    }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -378,7 +344,8 @@
 </head>
 <body>
 <deck-stage>
- 
+
+
   <!-- SLIDE 1: COVER -->
   <section id="s1" class="slide" data-screen-label="01 표지">
     <div class="bg-gradient"></div>
@@ -447,7 +414,7 @@
           <ul class="steps-list">
             <li>
               <span class="num-circle">1</span>
-              <span class="step-text"><strong>claude.ai 접속</strong> → 왼쪽 사이드바에서<br><strong>프로젝트</strong> 클릭</span>
+              <span class="step-text"><strong>claude.ai 접속</strong> → 왼쪽 사이드바에서 <strong>프로젝트</strong> 클릭</span>
             </li>
             <li>
               <span class="num-circle">2</span>
@@ -463,8 +430,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-right" style="flex:1.8; gap:20px; padding-top:120px;">
-          <div class="ss-frame" style="height:280px;">
+        <div class="col-right" style="flex:1.3; gap:20px;">
+          <div class="ss-frame" style="height:300px;">
             <img src="https://github.com/user-attachments/assets/c6e1e448-b893-44ae-a6b7-9b7c835f1538" alt="프로젝트 목록">
           </div>
         </div>
@@ -773,7 +740,7 @@
             </li>
         </div>
         <div class="col-right" style="flex:1.3; gap:20px;">
-          <div class="ss-frame" style="height:300px;">
+          <div class="ss-frame" style="height:560px;">
             <img src="https://github.com/user-attachments/assets/2282b3ed-4026-415a-8b15-e5e7cc626daa" alt="문항 생성 결과">
         </div>
       </div>
@@ -823,37 +790,6 @@
     </div>
     <div class="corner-logo">AI 문항 생성 매뉴얼</div>
     <div class="slide-num">12 / 13</div>
-
-     <!-- 하단 버튼 -->
-  <div class="slide-buttons">
-    <button onclick="prevSlide()">◀</button>
-    <button onclick="nextSlide()">▶</button>
-  </div>
-
-  <!-- JS -->
-  <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-      });
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    // 초기화
-    showSlide(currentIndex);
-  </script>
   </section>
 
 </deck-stage>

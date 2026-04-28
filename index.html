@@ -13,6 +13,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="deck-stage.js"></script>
 <style>
+     .slide-container {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .slide {
+      display: none;
+      font-size: 20px;
+      padding: 40px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+    }
+
+    .slide-buttons {
+      position: relative;
+      z-index: 1000;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .slide-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .slide-buttons button:hover {
+      background-color: #f0f0f0;
+    }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -339,39 +373,6 @@
     background: oklch(0.4 0.18 160);
     display: flex; align-items: center; justify-content: center;
     color: #fff; font-size: 20px; font-weight: 700;
-  }
-  .slide-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .slide {
-    display: none;
-    font-size: 20px;
-    padding: 40px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-  }
-  .slide-buttons {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .slide-buttons button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: white;   /* 버튼 배경을 흰색으로 */
-    color: black;              /* 글자 색은 검정으로 */
-    border: 1px solid #ccc;    /* 테두리 추가 (선택 사항) */
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .slide-buttons button:hover {
-    background-color: #f0f0f0; /* 마우스 올렸을 때 살짝 회색 */
-  }
-  .slide-buttons {
-    position: relative;
-    z-index: 1000;
   }
 </style>
 </head>
